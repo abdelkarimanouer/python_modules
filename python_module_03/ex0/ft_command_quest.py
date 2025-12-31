@@ -1,5 +1,4 @@
 import sys
-
 if __name__ == "__main__":
     length = len(sys.argv)
     print("=== Command Quest ===")
