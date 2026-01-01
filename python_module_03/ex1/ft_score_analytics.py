@@ -3,12 +3,15 @@ import sys
 if __name__ == "__main__":
     try:
         print("=== Player Score Analytics ===")
-        mylist = sys.argv[1:]
-        total_number = len(mylist)
-        if total_number >= 1:
+        if len(sys.argv) > 1:
+            mylist = []
+            for e in sys.argv[1:]:
+                mylist.append(int(e))
+            total_number = len(mylist)
             sum_numbers = sum(mylist)
             max_number = max(mylist)
             min_number = min(mylist)
+            print("Scores processed:", mylist)
             print("Total players:", total_number)
             print("Average score:", sum_numbers / total_number)
             print("High score:", max_number)
